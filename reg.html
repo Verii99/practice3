@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <script src= " ../static/js/jquery-3.4.js"></script>
+    <script src= " ../static/js/SignUp.js"></script>
+</head>
+<body>
+<h2>Регистрация</h2>
+<form method="post" action="/Reg">
+    <i1>Введите логин</i1>
+    <input type="text" name="name">
+     <i2>Введите E-mail</i2>
+    <input type="text" name="username">
+     <i3>Введите пароль</i3>
+    <input type="text" name="password">
+    <button type="submit">Reg</button>
+</form>
+
+{% for message in messages %}
+<div>{{message.name}}&nbsp;<i2>{{message.username}}</i2> <i>{{message.password}}</i> </div>
+{% endfor %}
+
+</body>
+</html>
